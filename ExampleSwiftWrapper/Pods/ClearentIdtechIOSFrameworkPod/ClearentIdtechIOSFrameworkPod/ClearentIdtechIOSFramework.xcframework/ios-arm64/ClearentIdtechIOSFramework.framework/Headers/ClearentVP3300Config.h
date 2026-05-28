@@ -7,6 +7,7 @@
 //
 
 #import "ClearentVP3300Configuration.h"
+//#import <ClearentIdtechIOSFramework/ClearentVP3300Configuration.h>
 
 @interface ClearentVP3300Config: NSObject <ClearentVP3300Configuration>
 @property (nonatomic) NSString* clearentBaseUrl;

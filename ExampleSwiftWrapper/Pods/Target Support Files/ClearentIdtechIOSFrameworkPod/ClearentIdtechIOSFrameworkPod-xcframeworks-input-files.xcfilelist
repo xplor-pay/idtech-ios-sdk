@@ -1,4 +1,3 @@
 ${PODS_ROOT}/Target Support Files/ClearentIdtechIOSFrameworkPod/ClearentIdtechIOSFrameworkPod-xcframeworks.sh
-${PODS_ROOT}/ClearentIdtechIOSFrameworkPod/ClearentIdtechIOSFrameworkPod/IDTech.xcframework
 ${PODS_ROOT}/ClearentIdtechIOSFrameworkPod/ClearentIdtechIOSFrameworkPod/ClearentIdtechIOSFramework.xcframework
-${PODS_ROOT}/ClearentIdtechIOSFrameworkPod/ClearentIdtechIOSFrameworkPod/CocoaLumberjack.xcframework
+${PODS_ROOT}/ClearentIdtechIOSFrameworkPod/ClearentIdtechIOSFrameworkPod/IDTech.xcframework

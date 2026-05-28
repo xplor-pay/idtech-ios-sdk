@@ -1,3 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-ExampleSwiftWrapper/Pods-ExampleSwiftWrapper-frameworks.sh
+${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework
 ${PODS_XCFRAMEWORKS_BUILD_DIR}/ClearentIdtechIOSFrameworkPod/ClearentIdtechIOSFramework.framework/ClearentIdtechIOSFramework
-${PODS_XCFRAMEWORKS_BUILD_DIR}/ClearentIdtechIOSFrameworkPod/CocoaLumberjack.framework/CocoaLumberjack

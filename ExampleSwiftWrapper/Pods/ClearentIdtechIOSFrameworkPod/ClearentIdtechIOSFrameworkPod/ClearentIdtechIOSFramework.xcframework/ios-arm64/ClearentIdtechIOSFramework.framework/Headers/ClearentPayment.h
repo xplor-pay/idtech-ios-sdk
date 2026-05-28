@@ -7,6 +7,7 @@
 //
 
 #import "ClearentPaymentRequest.h"
+//#import <ClearentIdtechIOSFramework/ClearentPaymentRequest.h>
 
 @interface ClearentPayment: NSObject <ClearentPaymentRequest>
 @property (nonatomic) double amount;
