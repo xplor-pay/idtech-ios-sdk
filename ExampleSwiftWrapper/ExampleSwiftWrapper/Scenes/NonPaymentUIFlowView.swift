@@ -1,5 +1,5 @@
 //
-//  HomeView.swift
+//  NonPaymentUIFlowHome.swift
 //  ExampleSwiftWrapper
 //
 //  Created by Manoj Baste on 28/05/26.
@@ -8,9 +8,9 @@ import SwiftUI
 import ClearentIdtechIOSFramework
 
 @available(iOS 14.0, *)
-struct HomeView: View {
+struct NonPaymentUIFlowView: View {
     
-    @StateObject private var viewModel = HomeViewModel()
+    @StateObject private var viewModel = NonPaymentUIViewModel()
     
     // MARK: - State
     @State private var readerStatus = "Reader"
@@ -55,7 +55,7 @@ struct HomeView: View {
                         // MARK: - Reader List
                         if !viewModel.readers.isEmpty {
                             ReaderListView(viewModel: viewModel)
-                                .frame(height: 200)
+                                .frame(height: 100)
                         }
                         
                         Spacer()
@@ -74,29 +74,21 @@ struct HomeView: View {
                             
                             Spacer()
                             
-                            // Tap To Pay
-                            ActionButton(
-                                title: "Charge $20.0 - use tap to pay",
-                                backgroundColor: .blue
-                            ) {
-                                viewModel.startTapToPayTransaction()
-                            }
-                            
                             // Card Reader
                             ActionButton(
-                                title: "Charge $20.0 - use card reader",
+                                title: "Charge $20.0 - Card Reader",
                                 backgroundColor: .blue
                             ) {
-                                viewModel.startCardReaderTransaction(with: 20.0)
+                                viewModel.startCardReaderTransaction(with: 20.00)
                             }
                             
                             // Manual Entry
                             ActionButton(
-                                title: "Charge $20.0 - use manual entry",
+                                title: "Charge $20.0 - Manual Entry",
                                 backgroundColor: .blue
                             ) {
                                 viewModel.startManualTransaction(
-                                    with: 20.0,
+                                    with: 20.00,
                                     card: "4111111111111111",
                                     csc: "999",
                                     expirationDateMMYY: "11/99"
@@ -109,17 +101,6 @@ struct HomeView: View {
                     }
                     .padding(.horizontal, 20)
                     .padding(.top, 20)
-                    .navigationDestination(
-                        isPresented: $viewModel.shouldShowTapToPay){
-                            if #available(iOS 16.4, *) {
-                                TapToPayRootView(
-                                    paymentInfo: viewModel.paymentInfo,
-                                    onDismiss: {
-                                        viewModel.shouldShowTapToPay = false
-                                    }
-                                )
-                            }
-                        }
                 } else {
                     // Fallback on earlier versions
                 }
@@ -135,7 +116,7 @@ struct HomeView: View {
 #Preview {
     if #available(iOS 16.0, *) {
         NavigationStack {
-            HomeView()
+            NonPaymentUIFlowView()
         }
     } else {
         // Fallback on earlier versions

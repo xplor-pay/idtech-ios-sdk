@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ClearentIdtechIOSFramework
 
 class AppDelegate: NSObject, UIApplicationDelegate {
     
@@ -13,8 +14,8 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
     ) -> Bool {
-        // SDK setup here
+        ClearentUIBrandConfigurator.shared.colorPalette = DemoAppColors()
+        ClearentUIBrandConfigurator.shared.fonts = DemoAppFonts()
         return true
     }
 }
-

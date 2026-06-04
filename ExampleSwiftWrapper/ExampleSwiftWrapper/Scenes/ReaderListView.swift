@@ -8,7 +8,7 @@ import SwiftUI
 
 struct ReaderListView: View {
     
-    @ObservedObject var viewModel: HomeViewModel
+    @ObservedObject var viewModel: NonPaymentUIViewModel
     
     var body: some View {
         

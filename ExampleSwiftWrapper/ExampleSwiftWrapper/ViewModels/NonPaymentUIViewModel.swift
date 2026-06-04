@@ -9,7 +9,7 @@ import SwiftUI
 import ClearentIdtechIOSFramework
 
 @MainActor
-class HomeViewModel: NSObject, ObservableObject {
+class NonPaymentUIViewModel: NSObject, ObservableObject {
     
     @Published var readerStatus = "No reader connected"
     @Published var infoMessage = ""
@@ -68,6 +68,7 @@ class HomeViewModel: NSObject, ObservableObject {
     
     func disconnectReader() {
         ClearentWrapper.shared.disconnectFromReader()
+        readers.removeAll()
         readerStatus = "No reader connected"
         infoMessage = "Device disconnected"
     }
@@ -144,23 +145,9 @@ class HomeViewModel: NSObject, ObservableObject {
             }
         }
     }
-    
-    func startTapToPayTransaction() {
-        let paymentInfo = PaymentInfo(amount: 20.11)
-        startTapToPayFlow(paymentInfo: paymentInfo)
-    }
-    
-    private func startTapToPayFlow(paymentInfo: PaymentInfo?) {
-        guard #available(iOS 16.4, *) else {
-            infoMessage = "Tap to Pay requires iOS 16.4 or later."
-            return
-        }
-        self.paymentInfo = paymentInfo
-        self.shouldShowTapToPay = true
-    }
 }
 
-extension HomeViewModel: @MainActor ClearentWrapperProtocol {
+extension NonPaymentUIViewModel: @MainActor ClearentWrapperProtocol {
     func didStartPairing() {
         infoMessage = "Searching for readers..."
     }

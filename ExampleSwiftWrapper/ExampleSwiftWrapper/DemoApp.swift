@@ -17,11 +17,11 @@ struct DemoApp: App {
         WindowGroup {
             if #available(iOS 16.0, *) {
                 NavigationStack {
-                    HomeView()
+                    QuickStartGuideView()
                 }
             } else {
                 NavigationView {
-                    HomeView()
+                    QuickStartGuideView()
                 }
                 .navigationViewStyle(StackNavigationViewStyle())
             }
