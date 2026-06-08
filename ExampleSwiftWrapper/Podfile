@@ -7,6 +7,6 @@ target 'ExampleSwiftWrapper' do
   use_frameworks!
 
   # Pods for ExampleSwiftWrapper
-     pod 'ClearentIdtechIOSFrameworkPod', '4.0.63'
+     pod 'ClearentIdtechIOSFrameworkPod', '4.0.158'
 
 end
