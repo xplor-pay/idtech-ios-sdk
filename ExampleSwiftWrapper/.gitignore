@@ -61,6 +61,3 @@ fastlane/test_output
 # Keep the project file to share targets, schemes, etc.
 !*.xcodeproj/project.pbxproj
 !*.xcworkspace/contents.xcworkspacedata
-
-# Local podspec file
-ClearentIdtechIOSFramework.podspec

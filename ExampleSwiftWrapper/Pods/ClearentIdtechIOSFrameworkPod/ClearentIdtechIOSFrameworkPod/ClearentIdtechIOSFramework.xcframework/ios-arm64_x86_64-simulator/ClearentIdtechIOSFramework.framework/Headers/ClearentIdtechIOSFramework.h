@@ -5,6 +5,7 @@
 //  Created by David Higginbotham on 5/3/18.
 //  Copyright © 2018 Clearent, L.L.C. All rights reserved.
 //
+
 #import "Clearent_VP3300.h"
 #import "ClearentManualEntry.h"
 
@@ -24,19 +25,27 @@
 #import "ClearentDeviceConnector.h"
 #import "ClearentIDTUtility.h"
 
-#import <IDTech/IDT_VP3300.h>
-#import <IDTech/IDTCommon.h>
-#import <IDTech/IDTUtility.h>
-#import <IDTech/IDT_Device.h>
-#import <IDTech/IDT_BTPay.h>
-#import <IDTech/IDT_BTMag.h>
-#import <IDTech/IDT_iMag.h>
-#import <IDTech/IDT_UniPay.h>
-#import <IDTech/IDT_UniMag.h>
-#import <IDTech/IDTMSRData.h>
-#import <IDTech/IDTEMVData.h>
-#import <IDTech/APDUResponse.h>
-#import <IDTech/APDUData.h>
-#import <IDTech/IDT_UniPayI_V.h>
-#import <IDTech/uniMag.h>
-#import <IDTech/UniPay.h>
+#import <IDTech/IDTech.h>
+
+//#import <ClearentIdtechIOSFramework/Clearent_VP3300.h>
+//#import <ClearentIdtechIOSFramework/ClearentManualEntry.h>
+//
+//#import <ClearentIdtechIOSFramework/ClearentPublicVP3300Delegate.h>
+//#import <ClearentIdtechIOSFramework/ClearentManualEntryDelegate.h>
+//#import <ClearentIdtechIOSFramework/ClearentCard.h>
+//#import <ClearentIdtechIOSFramework/ClearentPaymentRequest.h>
+//#import <ClearentIdtechIOSFramework/ClearentVP3300Configuration.h>
+//#import <ClearentIdtechIOSFramework/ClearentVP3300Config.h>
+//#import <ClearentIdtechIOSFramework/ClearentPayment.h>
+//#import <ClearentIdtechIOSFramework/ClearentResponse.h>
+//#import <ClearentIdtechIOSFramework/ClearentConnection.h>
+//#import <ClearentIdtechIOSFramework/ClearentTransactionToken.h>
+//#import <ClearentIdtechIOSFramework/ClearentFeedback.h>
+//#import <ClearentIdtechIOSFramework/ClearentBluetoothDevice.h>
+//#import <ClearentIdtechIOSFramework/ClearentDeviceConnector.h>
+//#import <ClearentIdtechIOSFramework/ClearentIDTUtility.h>
+
+//#import <IDTech/IDTech.h>
+//@class IDT_VP3300;
+//@class IDT_Device;
+//@class IDT_BTDevice;

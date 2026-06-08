@@ -1,2 +1,2 @@
-${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ClearentIdtechIOSFramework.framework
 ${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ClearentIdtechIOSFramework.framework

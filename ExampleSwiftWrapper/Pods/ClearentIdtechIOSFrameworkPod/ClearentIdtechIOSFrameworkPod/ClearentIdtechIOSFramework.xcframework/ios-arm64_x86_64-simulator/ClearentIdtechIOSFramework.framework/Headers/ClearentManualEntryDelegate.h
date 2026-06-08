@@ -7,6 +7,7 @@
 //
 #import <Foundation/Foundation.h>
 #import "ClearentTransactionToken.h"
+//#import <ClearentIdtechIOSFramework/ClearentTransactionToken.h>
 
 @protocol ClearentManualEntryDelegate <NSObject>
 

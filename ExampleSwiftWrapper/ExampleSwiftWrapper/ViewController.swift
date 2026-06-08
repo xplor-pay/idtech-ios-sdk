@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 import ClearentIdtechIOSFramework
 
 class ViewController: UIViewController {
@@ -48,6 +49,7 @@ class ViewController: UIViewController {
         let apiKey: String? =  "1573dd1f92af43e6ae59a0e6e4f5f32f" //nil
         
         let encryptionKeyData = Crypto.SHA256hash(data: "some_secret_here".data(using: .utf8)!)
+         //Change ClearentWrapperConfiguration to ClearentUIManagerConfiguration if you want to use the default UI provided by the SDK
         let clearentWrapperConfiguration = ClearentWrapperConfiguration(baseURL: baseURL, apiKey: apiKey, publicKey: nil, offlineModeEncryptionKeyData: encryptionKeyData)
         ClearentWrapper.shared.initialize(with: clearentWrapperConfiguration)
         ClearentWrapper.shared.delegate = self
@@ -164,6 +166,11 @@ class ViewController: UIViewController {
         startManualTransaction(with: 20.0, card: "4111111111111111", csc: "999", expirationDateMMYY: "11/99")
     }
     
+    @IBAction func startTapToPayTransactionAction(_ sender: Any) {
+        let paymentInfo = PaymentInfo(amount: 20.11)
+        startTapToPayFlow(paymentInfo: paymentInfo)
+    }
+    
     
     // MARK: Tableview helper methods
     
@@ -186,6 +193,16 @@ class ViewController: UIViewController {
         tableView.frame = self.contentView.bounds
         self.contentView.addSubview(tableView)
         self.tableView = tableView
+    }
+    
+    func startTapToPayFlow(paymentInfo: PaymentInfo?) {
+        if #available(iOS 16.4, *) {
+            let hostingController = UIHostingController(rootView: TapToPayRootView(
+                paymentInfo: paymentInfo, onDismiss: { [weak self] in
+                    self?.navigationController?.popViewController(animated: true)
+                }))
+            self.navigationController?.pushViewController(hostingController, animated: true)
+        }
     }
 }
 
