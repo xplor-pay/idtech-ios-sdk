@@ -13,7 +13,7 @@ struct PaymentUIFlowView: View {
     @StateObject private var viewModel = PaymentUIViewModel()
     
     var body: some View {
-        if #available(iOS 16.0, *) {
+        if #available(iOS 15.4, *) {
             VStack {
                 Spacer()
                 VStack(spacing: 30) {

@@ -11,10 +11,9 @@ struct SettingsViewContollerWrapper: UIViewControllerRepresentable {
     var onDismiss: () -> Void
     
     func makeUIViewController(context: Context) -> UINavigationController {
-        let vc = ClearentUIManager.shared.settingsViewController { _ in
+        ClearentUIManager.shared.settingsViewController { _ in
             onDismiss()
         }
-        return vc
     }
     
     func updateUIViewController(_ uiViewController: UINavigationController, context: Context) {}

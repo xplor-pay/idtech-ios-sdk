@@ -23,7 +23,7 @@ class NonPaymentUIViewModel: NSObject, ObservableObject {
     
     override init() {
         super.init()
-        configureSDK()
+//        configureSDK()
     }
     
     // MARK: - SDK Setup
@@ -32,7 +32,8 @@ class NonPaymentUIViewModel: NSObject, ObservableObject {
         // Initialize the SDK with needed info to work properly
         // ! Make sure you update the baseURL and apiKey with the correct values in order to test the SDK !
         let baseURL = "https://gateway-qa.clearent.net"
-        let apiKey: String? =  "1573dd1f92af43e6ae59a0e6e4f5f32f"
+        let apiKey: String? =  "72db156adcf34c0eb85a410bb2588ce9"
+//        let apiKey: String? =  "1573dd1f92af43e6ae59a0e6e4f5f32f"
         let encryptionKeyData = Crypto.SHA256hash(data: "some_secret_here".data(using: .utf8)!)
         
         //Change ClearentWrapperConfiguration to ClearentUIManagerConfiguration if you want to use the default UI provided by the SDK
